@@ -3,61 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consciência Digital - Recuperação</title>
+    <title>Consciência Digital: Guia Anti-Desinformação</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <h1>Cidadania Digital</h1>
+            <h1>Cidadania Digital & IA</h1>
             <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
-            <button id="toggle-dark-mode">🌓 Alternar Modo</button>
+            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌓 Alternar Modo</button>
         </div>
     </header>
 
     <main>
         <section id="sobre">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são vídeos ou imagens manipulados por Inteligência Artificial. Elas são perigosas quando usadas para espalhar desinformação automatizada.</p>
+            <h2>O Perigo da Desinformação Automatizada</h2>
+            <p>Com o avanço da Inteligência Artificial, criar notícias falsas, clonar vozes e manipular vídeos (<strong>deepfakes</strong>) tornou-se um processo rápido e de escala massiva. Essa automação espalha boatos antes mesmo que os fatos reais possam ser checados, afetando democracias, economias e a segurança de pessoas comuns.</p>
             
             <div class="cards-container">
                 <div class="card">
-                    <h3>🔍 Identificação</h3>
-                    <p>Fique atento a piscadas não naturais e falhas na iluminação do rosto.</p>
+                    <h3>🔍 Sinais de uma Deepfake</h3>
+                    <ul>
+                        <li>Piscadas de olhos ausentes ou robóticas.</li>
+                        <li>Iluminação do rosto desalinhada com o fundo.</li>
+                        <li>Erros estranhos perto das orelhas, óculos ou cabelos.</li>
+                        <li>Sincronia entre fala e lábios borrada.</li>
+                    </ul>
                 </div>
                 <div class="card">
-                    <h3>🛡️ Proteção</h3>
-                    <p>Sempre verifique as fontes antes de compartilhar qualquer conteúdo.</p>
+                    <h3>🛡️ Como Combater</h3>
+                    <ul>
+                        <li><strong>Pare:</strong> Não repasse por impulso emocional.</li>
+                        <li><strong>Cheque:</strong> Busque o conteúdo em fontes de Fact-Checking.</li>
+                        <li><strong>Denuncie:</strong> Use as ferramentas das redes sociais.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="interativo">
-            <h2>Quiz de Consciência Digital</h2>
+        <section id="jogo-container">
+            <h2>🎮 Jogo: Detetive Digital</h2>
+            <p>Você recebeu três casos suspeitos na sua rede social. Analise os dados e decida: <strong>É FATO ou DEEPFAKE/FAKE NEWS?</strong></p>
+            
             <form id="quiz-form">
-                <div class="form-group">
-                    <label for="pergunta1">1. O que fazer ao receber um vídeo bombástico?</label>
-                    <select id="pergunta1" required>
-                        <option value="">-- Selecione --</option>
-                        <option value="errado">Compartilhar direto no WhatsApp.</option>
-                        <option value="correto">Pesquisar em portais de notícias confiáveis.</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>2. Deepfakes são criadas por qual tecnologia?</label>
+                <div class="form-group jogo-card">
+                    <h4>Caso 1: O Áudio do Diretor</h4>
+                    <p class="caso-texto">"Um áudio vazado do diretor da sua escola diz que as aulas serão canceladas para sempre a partir de amanhã. A voz parece perfeitamente a dele, mas o áudio veio de uma conta anônima criada ontem."</p>
                     <div class="radio-group">
-                        <input type="radio" id="p2-a" name="pergunta2" value="correto" required>
-                        <label for="p2-a">Inteligência Artificial avançada.</label>
+                        <input type="radio" id="c1-fato" name="caso1" value="errado" required>
+                        <label for="c1-fato">✅ É Fato (A voz é idêntica!)</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" id="p2-b" name="pergunta2" value="errado">
-                        <label for="p2-b">Apenas filtros simples de fotos.</label>
+                        <input type="radio" id="c1-fake" name="caso1" value="correto">
+                        <label for="c1-fake">🚨 É Fake/Deepfake (Clonagem de voz por IA)</label>
                     </div>
                 </div>
 
-                <button type="submit" id="submit-btn">Enviar Respostas</button>
+                <div class="form-group jogo-card">
+                    <h4>Caso 2: O Pronunciamento Oficial</h4>
+                    <p class="caso-texto">"Um vídeo mostra um líder político declarando estado de emergência. O vídeo está publicado nos maiores portais de notícias do país e no canal verificado do governo."</p>
+                    <div class="radio-group">
+                        <input type="radio" id="c2-fato" name="caso2" value="correto" required>
+                        <label for="c2-fato">✅ É Fato (Fontes confiáveis e validadas)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="c2-fake" name="caso2" value="errado">
+                        <label for="c2-fake">🚨 É Fake/Deepfake (Parece suspeito)</label>
+                    </div>
+                </div>
+
+                <div class="form-group jogo-card">
+                    <h4>Caso 3: O Vídeo do Ator Famoso</h4>
+                    <p class="caso-texto">"Um vídeo mostra um ator famoso promovendo um jogo de apostas que promete dinheiro fácil. Quando você olha de perto, os dentes dele parecem borrados e ele não pisca os olhos nenhuma vez."</p>
+                    <div class="radio-group">
+                        <input type="radio" id="c3-fato" name="caso3" value="errado" required>
+                        <label for="c3-fato">✅ É Fato (Ele é rico, deve ser verdade)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="c3-fake" name="caso3" value="correto">
+                        <label for="c3-fake">🚨 É Fake/Deepfake (Manipulação visual e golpe por IA)</label>
+                    </div>
+                </div>
+
+                <button type="submit" id="submit-btn">Finalizar Investigação</button>
             </form>
 
             <div id="resultado-quiz" class="hidden"></div>
@@ -65,7 +94,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 - Educação Digital e Computação</p>
+        <p>&copy; 2026 - Componente Curricular: Educação Digital e Computação: Programação e IA (Ensino Médio)</p>
     </footer>
 
     <script src="script.js"></script>
