@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consciência Digital: Deepfakes e Desinformação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Cidadania Digital</h1>
+            <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
+            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌓 Modo Escuro</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="sobre">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são vídeos, áudios ou imagens manipulados de forma realista por meio de Inteligência Artificial. Embora a tecnologia tenha usos legítimos no entretenimento, ela é frequentemente usada para espalhar **desinformação**, arruinar reputações e fraudar sistemas de segurança.</p>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>🔍 Como Identificar?</h3>
+                    <p>Fique atento a piscadas não naturais, falhas na iluminação do rosto, distorções nas bordas e sincronia labial desalinhada.</p>
+                </div>
+                <div class="card">
+                    <h3>🛡️ Como se Proteger?</h3>
+                    <p>Sempre verifique a fonte da notícia, evite compartilhar conteúdos alarmantes sem checagem e use plataformas de Fact-Checking.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interativo">
+            <h2>Desafio Técnico: Você sabe identificar a mentira?</h2>
+            <p>Responda ao formulário abaixo para testar sua capacidade de combater a desinformação automatizada.</p>
+            
+            <form id="quiz-form">
+                <div class="form-group">
+                    <label for="pergunta1">1. Se você receber um vídeo bombástico de um político dizendo algo absurdo, qual a primeira atitude?</label>
+                    <select id="pergunta1" required>
+                        <option value="">-- Selecione uma opção --</option>
+                        <option value="errado">Compartilhar imediatamente nos grupos de família.</option>
+                        <option value="correto">Pesquisar em portais de notícias confiáveis para ver se é real.</option>
+                        <option value="errado">Acreditar, afinal, se está em vídeo, deve ser verdade.</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>2. Qual das seguintes opções é uma característica comum de um Deepfake de vídeo mal feito?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="p2-a" name="pergunta2" value="errado" required>
+                        <label for="p2-a">Áudio em alta definição perfeitamente sincronizado.</label>
+                    </div>
+                    <div class="radio-group">
