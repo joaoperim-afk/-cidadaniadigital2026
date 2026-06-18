@@ -1,0 +1,194 @@
+/* Configurações Globais e Variáveis de Cores (Hierarquia Limpa) */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --success-color: #2f855a;
+}
+
+/* Classe aplicada via JavaScript para o Modo Escuro */
+body.dark-mode {
+    --bg-color: #1a202c;
+    --text-color: #f7fafc;
+    --primary-color: #90cdf4;
+    --secondary-color: #63b3ed;
+    --card-bg: #2d3748;
+    --border-color: #4a5568;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a365d;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+body.dark-mode header {
+    background-color: #0d1b2a;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#toggle-dark-mode {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+#toggle-dark-mode:hover {
+    transform: scale(1.05);
+}
+
+/* Layout Principal com Flexbox */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Cards usando Flexbox */
+.cards-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* Formulários e Elementos de Interação */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+select, input[type="radio"] {
+    margin-top: 0.25rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.radio-group {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#submit-btn {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+#submit-btn:hover {
+    background-color: #1a365d;
+}
+
+/* Área de feedback do Quiz */
+#resultado-quiz {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sucesso {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
+
+.atencao {
+    background-color: #fed7d7;
+    color: #742a2a;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #718096;
+    border-top: 1px solid var(--border-color);
+}
+
+/* 📱 Responsividade - CSS Media Queries (Obrigatório para Nível 4) */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Transforma os cards paralelos em verticais no celular */
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
