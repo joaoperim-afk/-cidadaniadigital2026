@@ -12,14 +12,14 @@
         <div class="header-container">
             <h1>Cidadania Digital & IA</h1>
             <p>O Impacto das Deepfakes e da Desinformação na Sociedade</p>
-            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌓 Alternar Modo</button>
+            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">Alternar Modo</button>
         </div>
     </header>
 
     <main>
         <section id="sobre">
             <h2>O Perigo da Desinformação Automatizada</h2>
-            <p>Com o avanço da Inteligência Artificial, criar notícias falsas, clonar vozes e manipular vídeos (<strong>deepfakes</strong>) tornou-se um processo rápido e de escala massiva. Essa automação espalha boatos antes mesmo que os fatos reais possam ser checados, afetando democracias, economias e a segurança de pessoas comuns.</p>
+            <p>Com o avanço da Inteligência Artificial, criar notícias falsas, clonar vozes e manipular vídeos (<strong>deepfakes</strong>) tornou-se um processo rápido e de escala massiva. Essa automação espalha boatos antes mesmo que os fatos reais possam ser checados, afetando democracies, economias e a segurança de pessoas comuns.</p>
             
             <div class="cards-container">
                 <div class="card">
@@ -42,9 +42,34 @@
             </div>
         </section>
 
+        <section id="reportagem">
+            <h2>📰 Reportagem: O Impacto Real e Prejudicial das Deepfakes</h2>
+            <div class="reportagem-conteudo">
+                <p>O uso malicioso de mídias sintéticas geradas por IA deixou de ser uma ameaça teórica e tornou-se um problema crítico global. Especialistas alertam que o impacto das <strong>deepfakes</strong> atinge três pilares principais da sociedade contemporânea:</p>
+                
+                <div class="impacto-grade">
+                    <div class="impacto-item">
+                        <h4>Fraudes Financeiras Avançadas</h4>
+                        <p>Criminosos utilizam a clonagem de voz (audiofakes) para simular sequestros ou ordens de diretores de empresas solicitando transferências bancárias urgentes. Em casos globais recentes, empresas perderam milhões de dólares após funcionários acreditarem estar em videoconferências legítimas com seus CEOs.</p>
+                    </div>
+                    <div class="impacto-item">
+                        <h4>Danos Reputacionais e Psicológicos</h4>
+                        <p>A maior parte das deepfakes criadas hoje na internet visa a difamação e a humilhação de indivíduos — afetando desproporcionalmente mulheres, estudantes e figuras públicas. A criação de imagens falsas sem consentimento destrói carreiras e causa danos psicológicos severos e irreparáveis às vítimas.</p>
+                    </div>
+                    <div class="impacto-item">
+                        <h4>Ataques à Democracia e Confiança</h4>
+                        <p>Durante períodos eleitorais, vídeos falsos de candidatos confessando crimes ou anunciando desistências são espalhados intencionalmente na véspera das votações. Mesmo quando desmentidos, o conteúdo deixa uma "mancha" na percepção do eleitor, desgastando a confiança nas instituições e no próprio jornalismo.</p>
+                    </div>
+                </div>
+                <blockquote class="citacao">
+                    "O maior perigo da deepfake não é apenas fazer as pessoas acreditarem em uma mentira, mas fazê-las duvidar de absolutamente tudo o que é real." — Alerta de especialistas em segurança digital.
+                </blockquote>
+            </div>
+        </section>
+
         <section id="jogo-container">
             <h2>🎮 Jogo: Detetive Digital</h2>
-            <p>Você recebeu três casos suspeitos na sua rede social. Analise os dados e decida: <strong>É FATO ou DEEPFAKE/FAKE NEWS?</strong></p>
+            <p>Você recebeu cinco casos suspeitos na sua rede social. Analise os dados e decida: <strong>É FATO ou DEEPFAKE/FAKE NEWS?</strong></p>
             
             <form id="quiz-form">
                 <div class="form-group jogo-card">
@@ -75,7 +100,7 @@
 
                 <div class="form-group jogo-card">
                     <h4>Caso 3: O Vídeo do Ator Famoso</h4>
-                    <p class="caso-texto">"Um vídeo mostra um ator famoso promovendo um jogo de apostas que promete dinheiro fácil. Quando você olha de perto, os dentes dele parecem borrados e ele não pisca os olhos nenhuma vez."</p>
+                    <p class="caso-texto">"Um vídeo mostra um actor famoso promovendo um jogo de apostas que promete dinheiro fácil. Quando você olha de perto, os dentes dele parecem borrados e ele não pisca os olhos nenhuma vez."</p>
                     <div class="radio-group">
                         <input type="radio" id="c3-fato" name="caso3" value="errado" required>
                         <label for="c3-fato">✅ É Fato (Ele é rico, deve ser verdade)</label>
@@ -83,6 +108,32 @@
                     <div class="radio-group">
                         <input type="radio" id="c3-fake" name="caso3" value="correto">
                         <label for="c3-fake">🚨 É Fake/Deepfake (Manipulação visual e golpe por IA)</label>
+                    </div>
+                </div>
+
+                <div class="form-group jogo-card">
+                    <h4>Caso 4: A Chamada de Emergência do Familiar</h4>
+                    <p class="caso-texto">"Você recebe uma chamada de vídeo do seu irmão mais velho pedindo uma transferência bancária rápida porque o carro quebrou. O fundo do vídeo está completamente estático, a voz corta estranhamente e o Pix solicitado está no nome de um desconhecido."</p>
+                    <div class="radio-group">
+                        <input type="radio" id="c4-fato" name="caso4" value="errado" required>
+                        <label for="c4-fato">✅ É Fato (Estou vendo o rosto dele na tela)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="c4-fake" name="caso4" value="correto">
+                        <label for="c4-fake">🚨 É Fake/Deepfake (Golpe com clonagem de imagem e voz em tempo real)</label>
+                    </div>
+                </div>
+
+                <div class="form-group jogo-card">
+                    <h4>Caso 5: A Descoberta Científica</h4>
+                    <p class="caso-texto">"Um portal de ciências publica um artigo detalhando uma nova espécie de planta descoberta na Amazônia. O texto traz fotos nítidas, o nome dos cientistas da USP responsáveis e o link para a pesquisa publicada em uma revista científica renomada."</p>
+                    <div class="radio-group">
+                        <input type="radio" id="c5-fato" name="caso5" value="correto" required>
+                        <label for="c5-fato">✅ É Fato (Dados verificáveis, pesquisadores reais e fontes científicas)</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="c5-fake" name="caso5" value="errado">
+                        <label for="c5-fake">🚨 É Fake/Deepfake (Tudo na internet sobre ciência é manipulado)</label>
                     </div>
                 </div>
 
