@@ -5,6 +5,7 @@
     --secondary-color: #3182ce;
     --card-bg: #ffffff;
     --border-color: #e2e8f0;
+    --blockquote-bg: #edf2f7;
 }
 
 body.dark-mode {
@@ -14,6 +15,7 @@ body.dark-mode {
     --secondary-color: #63b3ed;
     --card-bg: #2d3748;
     --border-color: #4a5568;
+    --blockquote-bg: #4a5568;
 }
 
 * {
@@ -101,6 +103,43 @@ h2 {
     margin-top: 0.5rem;
 }
 
+/* Estilos da Nova Seção de Reportagem */
+.reportagem-conteudo p {
+    margin-bottom: 1.5rem;
+}
+
+.impacto-grade {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.impacto-item {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #e53e3e;
+}
+
+.impacto-item h4 {
+    color: #e53e3e;
+    margin-bottom: 0.4rem;
+}
+
+body.dark-mode .impacto-item h4 {
+    color: #feb2b2;
+}
+
+.citacao {
+    background-color: var(--blockquote-bg);
+    border-left: 4px solid var(--secondary-color);
+    padding: 1rem;
+    font-style: italic;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
 /* Estilização das cartas do Jogo */
 .jogo-card {
     background-color: var(--bg-color);
@@ -168,7 +207,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsividade Avançada com Flexbox */
+/* Responsividade com Flexbox */
 @media (max-width: 650px) {
     .cards-container {
         flex-direction: column;
